@@ -52,14 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
         bar.style.animationDelay = `${index * 0.2}s`;
     });
 
-    // Add parallax effect to hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const heroVisual = document.querySelector('.hero-visual');
-        if (heroVisual) {
-            heroVisual.style.transform = `translateY(${scrolled * 0.3}px)`;
-        }
-    });
+    // Parallax effect disabled to prevent movement during scroll
+    // window.addEventListener('scroll', () => {
+    //     const scrolled = window.pageYOffset;
+    //     const heroVisual = document.querySelector('.hero-visual');
+    //     if (heroVisual) {
+    //         heroVisual.style.transform = `translateY(${scrolled * 0.3}px)`;
+    //     }
+    // });
 
     // Add typing effect to hero title (optional enhancement)
     const heroTitle = document.querySelector('.hero-title');
@@ -93,24 +93,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add loading animation for project images
-    const projectImages = document.querySelectorAll('.project-image');
-    projectImages.forEach(image => {
-        image.addEventListener('mouseenter', function() {
-            const placeholder = this.querySelector('.dashboard-placeholder');
-            if (placeholder) {
-                placeholder.style.transform = 'rotate(360deg) scale(1.1)';
-                placeholder.style.transition = 'transform 0.6s ease';
-            }
-        });
+    // Dashboard animations disabled to prevent movement during scroll
+    // const projectImages = document.querySelectorAll('.project-image');
+    // projectImages.forEach(image => {
+    //     image.addEventListener('mouseenter', function() {
+    //         const placeholder = this.querySelector('.dashboard-placeholder');
+    //         if (placeholder) {
+    //             placeholder.style.transform = 'rotate(360deg) scale(1.1)';
+    //             placeholder.style.transition = 'transform 0.6s ease';
+    //         }
+    //     });
         
-        image.addEventListener('mouseleave', function() {
-            const placeholder = this.querySelector('.dashboard-placeholder');
-            if (placeholder) {
-                placeholder.style.transform = 'rotate(0deg) scale(1)';
-            }
-        });
-    });
+    //     image.addEventListener('mouseleave', function() {
+    //         const placeholder = this.querySelector('.dashboard-placeholder');
+    //         if (placeholder) {
+    //             placeholder.style.transform = 'rotate(0deg) scale(1)';
+    //         }
+    //     });
+    // });
 
     // Add dynamic background particles (subtle effect)
     createBackgroundParticles();
